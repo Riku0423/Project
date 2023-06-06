@@ -64,5 +64,3 @@ summary_with_average = pd.concat([summary, average_row])
 # Print
 print(summary_with_average)
 
-
-
