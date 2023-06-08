@@ -1,10 +1,10 @@
-# Project
+# Project1
 
 clc
 clear all
 close all
 
-% データの取得
+% Load data
 f = fred;
 startdate = '01/01/1994';
 enddate = '07/01/2020';
@@ -64,7 +64,7 @@ datetick('x', 'yyyy')
 [GDP_uk, trend] = qmacro_hpfilter(log(GDP_uk), 1600);
 
 
-% compute sd(y) (from detrended series)
+% compute ysd (from detrended series)
 ysd_japan = std(GDP_japan)*100;
 ysd_uk = std(GDP_uk)*100;
 corryc = corrcoef(GDP_japan_detrended(1:n),GDP_uk_detrended(1:n)); corryc = corryc(1,2);
